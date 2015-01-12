@@ -310,7 +310,7 @@ public class SeyrenConfig {
     }
     
     @JsonIgnore
-    public int getGraphiteSSLPort() {
+    public int getGraphitePort() {
         return Integer.valueOf(splitBaseUrl(graphiteUrl)[1]);
     }
     
