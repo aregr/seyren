@@ -188,7 +188,9 @@ public class GraphiteHttpClient {
         	authCache.put(targetHost, new BasicScheme());
         	
         	context.setCredentialsProvider(credsProvider);
-        	context.setAuthCache(authCache);        	
+        	context.setAuthCache(authCache);
+        	
+        	clientBuilder.setDefaultCredentialsProvider(credsProvider);
         }
         
         return clientBuilder.build();
